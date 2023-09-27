@@ -1,0 +1,16 @@
+.box {
+  width: 450px;
+  margin: 0 auto;
+}
+
+.primeryTitle {
+  font-weight: 900;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #ffffff;
+}
+
+.secondaryTitle {
+  font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #9fa39f;
+}

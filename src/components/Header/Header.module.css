@@ -1,0 +1,44 @@
+.header {
+  height: 120px;
+  background: rgba(103, 195, 114, 0.2);
+  border-bottom: 1px solid #0bc517;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navLink {
+  margin-bottom: 8px;
+  color: #3b2e2e;
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.active {
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #dce7ff;
+  border-bottom: 1px solid #dce7ff;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log {
+  text-align: end;
+}

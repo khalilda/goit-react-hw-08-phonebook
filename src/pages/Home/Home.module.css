@@ -1,0 +1,29 @@
+.homeHelp {
+  background-color: #333;
+}
+.greeting {
+  padding-left: 10px;
+  padding-bottom: 7px;
+  border-left: 2px solid rgb(12, 216, 12);
+  border-bottom: 2px solid rgb(12, 216, 12);
+  width: 265px;
+}
+.text {
+  color: rgb(254, 5, 13);
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.flag {
+  text-align: center;
+  font-weight: 900;
+}
+.united {
+  border-left: 40px solid yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 200px;
+  color: black;
+}
