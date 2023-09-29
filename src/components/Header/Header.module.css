@@ -1,7 +1,7 @@
 .header {
   height: 120px;
-  background: rgba(103, 195, 114, 0.2);
-  border-bottom: 1px solid #0bc517;
+  background: orange;
+  border-bottom: 1px solid yellow;
 }
 .nav {
   display: flex;

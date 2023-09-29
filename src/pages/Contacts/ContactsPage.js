@@ -1,8 +1,8 @@
 import { Box } from 'components/Box';
-import { ContactForm } from 'components/ContactForm';
 import { ContactList } from 'components/ContactList';
 import { Filter } from 'components/Filter';
 import style from './ContactsPage.module.css';
+import { ContactForm } from 'components/ContactForm';
 
 export default function ContactsPage() {
   return (

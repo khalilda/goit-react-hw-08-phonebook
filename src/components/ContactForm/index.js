@@ -1,1 +1,1 @@
-export * from './ContactForm.jsx';
+export * from './ContactForm';

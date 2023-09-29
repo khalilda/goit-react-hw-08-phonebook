@@ -5,9 +5,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchCurrentUser } from 'redux/auth/auth-operations';
 import { getToken } from 'redux/selectors';
-import { Header } from './Header';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
+import { Header } from './Header/Header';
+// import { BrowserRouter as Route } from 'react-router-dom';
 
 const Home = lazy(() => import('../pages/Home'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));

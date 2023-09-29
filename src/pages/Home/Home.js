@@ -5,23 +5,24 @@ import style from './Home.module.css';
 export default function Home() {
   return (
     <Box className={style.homeHelp}>
-      <p className={style.greeting}>Welcome to the contact storage app!</p>
-      <p className={style.text}>STOP WAR in UKRAINE!!!</p>
-
-      <p className={style.text}>All current information on</p>
+      <p className={style.greeting}>
+        Welcome to one of the safest contact storage sites.
+      </p>
+      <p className={style.text}>Khalil Dajani, junior FullStack Developer</p>
 
       <p className={style.flag}>
         <a
           className={style.united}
-          href="https://u24.gov.ua/ "
+          href="https://github.com/khalilda "
           target="_blank"
           rel="noopener noreferrer"
         >
-          UNITED24
+          My GitHub
         </a>
       </p>
+
       <p className={style.text}>
-        Make a donation to any charity in order to overcome the aggressor...
+        Check my profile for more projects and information
       </p>
     </Box>
   );
