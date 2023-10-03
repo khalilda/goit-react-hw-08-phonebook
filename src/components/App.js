@@ -1,10 +1,6 @@
-import { lazy, Suspense, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
+import { lazy, Suspense } from 'react';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
-import { fetchCurrentUser } from 'redux/auth/auth-operations';
-import { getToken } from 'redux/selectors';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 import { Header } from './Header/Header';
@@ -16,47 +12,34 @@ const Register = lazy(() => import('../pages/Register'));
 const Login = lazy(() => import('../pages/Login'));
 
 export const App = () => {
-  const dispatch = useDispatch();
-  const token = useSelector(getToken);
+  // const dispatch = useDispatch();
+  // const token = useSelector(getToken);
 
-  useEffect(() => {
-    if (token) {
-      dispatch(fetchCurrentUser());
-    }
-    return;
-  }, [dispatch, token]);
+  // useEffect(() => {
+  //   if (token) {
+  //     dispatch(fetchCurrentUser());
+  //   }
+  //   return;
+  // }, [dispatch, token]);
 
   return (
     <>
       <Header />
       <main>
-        <Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
-
-            <Route path="/" element={<PrivateRoute />}>
+            <Route element={<PrivateRoute />}>
               <Route path="/contacts" element={<ContactsPage />} />
             </Route>
-
-            <Route path="/" element={<PublicRoute />}>
+            <Route element={<PublicRoute />}>
               <Route path="/registration" element={<Register />} />
               <Route path="/login" element={<Login />} />
             </Route>
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </main>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
     </>
   );
 };
