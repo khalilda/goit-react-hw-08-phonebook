@@ -1,4 +1,4 @@
-import { getContacts } from '../../redux/selectors';
+import { selectContacts } from '../../redux/selectors';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContacts } from 'redux/operations';
@@ -6,7 +6,7 @@ import style from './ContactForm.module.css';
 import { toast } from 'react-toastify';
 
 export const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');

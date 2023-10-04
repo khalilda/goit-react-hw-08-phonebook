@@ -1,10 +1,8 @@
-import { getToken } from 'redux/selectors';
-import { useSelector } from 'react-redux';
-import { Navigate, Outlet } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from './hook/useAuth';
 
-export const PublicRoute = () => {
-  const token = useSelector(getToken);
+export const PublicRoute = ({ component: Component, redirectTo = '/' }) => {
+  const { isLoggedIn } = useAuth();
 
-  // return token ? <Navigate to="/" /> : <Outlet />;
-  return token ? <Navigate to="/contacts" /> : <Outlet />;
+  return isLoggedIn ? <Navigate to={redirectTo} /> : Component;
 };
