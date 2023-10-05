@@ -44,7 +44,7 @@ export const App = () => {
             element={<PublicRoute component={<Login />} redirectTo="/" />}
           />
         </Route>
-        <route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </>
   );
